@@ -1,0 +1,179 @@
+<div class="template">
+
+  <style>
+
+.carouselcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: center; /* Adjusts spacing vertically if needed */
+  text-align: center; /* Ensures the text inside the container is centered */
+  margin: 0 auto; /* Centers the container itself if it has a specified width */
+  width: 100%; /* Adjust width as necessary */
+  margin: 30px auto;
+}
+
+/* Default styles for larger screens */
+#carouselIndicators {
+  height: 500px; /* Adjusted from 600px to match the img height */
+  width: 85%;
+}
+
+#carouselIndicators img {
+  object-fit: cover;
+  height: 500px; /* Default height for larger screens */
+}
+
+
+
+/* Media query for tablets (e.g., iPads) */
+@media (max-width: 768px) {
+  #carouselIndicators, #carouselIndicators img {
+    height: 400px; /* Smaller height for tablet screens */
+  }
+}
+
+/* Media query for phones */
+@media (max-width: 576px) {
+  #carouselIndicators, #carouselIndicators img {
+    height: 250px; /* Even smaller height for phone screens */
+  }
+}
+
+  </style>
+
+
+  <div class="spiralcontainer">
+  <div class="spiralwrapper">
+    <div id="spiral" class="spiral"></div>
+    <div id="spiral2" class="spiral"></div>
+  </div>
+</div>
+
+<hr>
+
+<div class="carouselcontainer">
+<h1> Featured destinations</h1>
+
+<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img class="d-block w-100" src="../../images/new york.jpg" alt="New york">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>New york</h2>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img class="d-block w-100" src="../../images/paris.jpg" alt="Paris">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Paris</h2>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img class="d-block w-100" src="../../images/tokyo.jpg" alt="Tokyo">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Tokyo</h2>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img class="d-block w-100" src="../../images/rio.jpg" alt="Rio de janeiro">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Rio de janeiro</h2>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img class="d-block w-100" src="../../images/copenhagen.jpg" alt="Copenhagen">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Copenhagen</h2>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img class="d-block w-100" src="../../images/sydney.jpg" alt="Sydney">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Sydney</h2>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img class="d-block w-100" src="../../images/capetown.jpg" alt="Capetown">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Capetown</h2>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
+</div>
+
+<hr>
+
+
+<div class="travel-tips-container text-center my-5">
+  <h2 class="mb-4">Travel Tips</h2>
+  <div class="row">
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <!-- Card 1 -->
+      <div class="col-md-3 mb-3 d-flex">
+        <div class="card bg-transparent border-dark">
+          <div class="card-body border border-dark">
+            <h5 class="card-title">Pack Smart</h5>
+            <p class="card-text">Pack light to make your travel easier. Always bring versatile items and avoid overpacking by laying out everything you think you need, then halving it.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-3 mb-3 d-flex">
+        <div class="card bg-transparent border-dark">
+          <div class="card-body border border-dark">
+            <h5 class="card-title">Stay Safe</h5>
+            <p class="card-text">Keep your belongings secure and be mindful of your surroundings. Use RFID wallets to protect your information and always have a backup plan in case of emergencies.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-3 mb-3 d-flex">
+        <div class="card bg-transparent border-dark">
+          <div class="card-body border border-dark">
+            <h5 class="card-title">Local Cuisine</h5>
+            <p class="card-text">Don't shy away from trying local foods. It's a window into the culture, and you might discover some new favorites. Always ask locals for their recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto text-center">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p class="lead">Get the latest travel tips, special offers, and more delivered to your inbox.</p>
+      <form id="newsletter-form" class="form-inline justify-content-center">
+        <div class="form-group mb-2">
+          <label for="email" class="sr-only">Email</label>
+          <input type="text" class="form-control" id="email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Enter your email address" required>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2 ml-2">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div>

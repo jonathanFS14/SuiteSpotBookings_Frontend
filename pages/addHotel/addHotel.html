@@ -1,0 +1,82 @@
+<div class="template">
+    <h3 style="margin-top: 0.5em;min-height: 1em;">Add Hotel</h3>
+    <hr />
+    <div>
+      <form id="form" style="max-width: 800px;">
+
+        <div class="row">
+          <div class="col-md-2">
+            <label for="Name">Name</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" id="Name" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2">
+            <label for="Street">Street</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" id="Street" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2">
+            <label for="City">City</label>
+          </div>
+          <div class="col-md-4">
+            <input type="text" id="City" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2">
+            <label for="Zip">Zip</label>
+          </div>
+          <div class="col-md-4">
+            <input type="text" id="Zip"   required>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+              <label for="Country">Country</label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" id="Country"   required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+              <label for="Phonenumber">Phonenumber</label>
+            </div>
+            <div class="col-md-4">
+              <input type="number" id="Phonenumber" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+              <label for="Email">Email</label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" id="Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" >
+            </div>
+        </div>
+
+        <div class="row">
+          <p id="status" style="min-height: 1em;margin-top:0.5em;"> </p>
+          <div style="margin-top:2em;">
+            <button id="submitHotel" class="btn btn-dark">Submit new Hotel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <br>
+    <br>
+    <p id="hotelResponse"></p>
+    <p id="error" style="color:red"></p>
+  </div>

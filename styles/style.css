@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  background-image: linear-gradient(
+    136deg,
+    rgb(149, 153, 226) 0%,
+    rgb(139, 198, 236) 100%
+  );
+}
+
+/*footer home*/
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+}
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
+}
+.social-icons a.twitter:hover {
+  background-color: #00aced;
+}
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89;
+}
+/*footer home*/
+
+/*Spiral home*/
+.spiralcontainer {
+  position: relative;
+  height: 300px;
+  margin-left: 205px;
+}
+
+.spiralwrapper {
+  position: relative;
+  height: 100%;
+}
+
+
+.spiral {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  text-transform: uppercase;
+    /* Ensure spirals are positioned correctly within the wrapper */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes spiral {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.character {
+  color: black;
+  font-size: 4em;
+  animation: spiral 5s infinite linear;
+  transform: translateY(calc(sin(var(--angle)) * 100px))
+    scale(calc(cos(var(--angle)) * 0.5 + 0.5));
+}
+
+/*Spiral home    animation: spiral 5s infinite linear;        */

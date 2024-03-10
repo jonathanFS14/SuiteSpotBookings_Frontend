@@ -1,0 +1,111 @@
+<div class="template">
+    <style>
+      .row button {
+        margin-top: 1em;
+        padding: 0.5em;
+      }
+  
+      .btnWidth {
+        width: 100%
+      }
+    </style>
+    <div style="max-width:900px;">
+      <h1>Find Hotel</h1>
+      <hr />
+      <div class="row">
+        <div class="col-md-3">
+          <input type="number" id="hotelId" placeholder="Enter hotel id" required/>
+        </div>
+        <br>
+        <div class="col-md-2">
+          <button class="btn btn-primary" id="fetchHotel">Get Hotel</button>
+        </div>
+      </div>
+      <hr/>
+      
+      <p id="error"></p>
+      <p id="succes"></p>
+
+      <div>
+        <form id="hotelForm">
+
+          <div class="row">
+            <div class="col-md-2">
+              <label for="Name">Name</label>
+            </div>
+            <div class="col-md-10">
+              <input id="Name" required>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-2">
+              <label for="Street">Street</label>
+            </div>
+            <div class="col-md-10">
+              <input id="Street" required>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-2">
+              <label for="City">City</label>
+            </div>
+            <div class="col-md-4">
+              <input id="City" required>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-2">
+              <label for="Zip">Zip</label>
+            </div>
+            <div class="col-md-4">
+              <input id="Zip">
+            </div>
+          </div>
+  
+          <div class="row">
+              <div class="col-md-2">
+                <label for="Country">Country</label>
+              </div>
+              <div class="col-md-4">
+                <input id="Country">
+              </div>
+          </div>
+  
+          <div class="row">
+              <div class="col-md-2">
+                <label for="Phonenumber">Phonenumber</label>
+              </div>
+              <div class="col-md-4">
+                <input id="Phonenumber">
+              </div>
+          </div>
+  
+          <div class="row">
+              <div class="col-md-2">
+                <label for="Email">Email</label>
+              </div>
+              <div class="col-md-4">
+                <input id="Email">
+              </div>
+          </div>
+  
+      </form>
+  
+        
+        <div class="row" style="margin-top:2em;">
+          <div class="col-md-3">
+            <button id="editHotel" class="btn btn-dark btnWidth">Submit Changes</button>
+          </div>
+          <div class="col-md-3">
+            <button id="deleteHotel" class="btn btn-dark btnWidth">Delete Hotel</button>
+          </div>
+        </div>
+  
+  
+      </div>
+      
+    </div>
+  </div>

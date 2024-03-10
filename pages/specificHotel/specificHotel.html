@@ -1,0 +1,74 @@
+<div class="template">
+
+   <!-- <div id="cards-container" class="mt-4"></div> --> 
+
+   <a href="/hotels" data-navigo ><button>Go back</button></a>
+
+    <div id="hotel-details" class="container mt-5">
+        <!-- Hotel Name and Rating -->
+        <div class="text-center mb-5">
+            <h2 id="hotel-name" class="fw-bold">Hotel Name</h2>
+            <p id="hotel-rating" class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+            </p>
+        </div>
+
+        <!-- Hotel Images Carousel -->
+        <div id="hotel-images-carousel" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../images/hotel.jpg" class="d-block w-100" alt="Hotel Image 1">
+                </div>
+                <!-- Additional images -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hotel-images-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hotel-images-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Hotel Description -->
+        <div class="mb-4">
+            <h3 class="mb-3">Description</h3>
+            <p id="hotel-description">This is a sample description of the hotel, highlighting its features, location, and what guests can expect during their stay.</p>
+        </div>
+
+        <!-- Hotel Amenities -->
+        <div class="mb-4">
+            <h3 class="mb-3">Amenities</h3>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Free WiFi</h5>
+                            <p class="card-text">High-speed internet access throughout the hotel.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional amenities as cards -->
+            </div>
+        </div>
+
+        <!-- Booking and Contact Information -->
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card border-primary mb-3">
+                    <div class="card-header bg-primary text-white">Book Your Stay</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Reservation</h5>
+                        <p class="card-text">Call us at <strong id="hotel-phone">+1234567890</strong> or email <strong id="hotel-email">booking@hotel.com</strong> to book your stay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p id="error" class="text-center text-danger mt-4"></p>
+
+</div>

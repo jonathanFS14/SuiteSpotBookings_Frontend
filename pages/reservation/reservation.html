@@ -1,0 +1,47 @@
+<div class="template">
+    <div class="container mt-4">
+        <form id="reservationForm">
+            <h2 class="mb-3">Make a Reservation</h2>
+
+            <p id="error" style="color: red;"></p>
+            <p id="succes"></p>
+    
+            <div class="mb-3">
+                <label for="roomId" class="form-label">Room ID:</label>
+                <input type="number" class="form-control" id="roomId" name="roomId" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="reservationDateStartDate">Start Date:</label>
+                <input type="date" id="reservationDateStartDate" name="reservationDateStartDate" required>
+            </div>
+        
+            <div class="mb-3">
+                <label for="reservationDateEndDate">End Date:</label>
+                <input type="date" id="reservationDateEndDate" name="reservationDateEndDate" required>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Reserve</button>
+        </form>
+    
+        
+    </div>
+    <hr/>
+    <hr/>
+    <h2 class="mb-3">My Reservations</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Room number</th>
+                <th>Reservation Start</th>
+                <th>Reservation End</th>
+                <th>Delete</th>    
+            </tr>
+        </thead>
+        <tbody id="table-rows">
+        </tbody>
+    </table>
+    <hr/>
+
+    <div>

@@ -1,0 +1,517 @@
+<div class="template">
+  <style>
+    .page-content {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      -o-justify-content: center;
+      -ms-justify-content: center;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      align-items: center;
+      -o-align-items: center;
+      -ms-align-items: center;
+      -moz-align-items: center;
+      -webkit-align-items: center;
+    }
+
+    .form-v10-content {
+      background: #fff;
+      width: 800px;
+      border-radius: 10px;
+      -o-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -o-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -ms-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      margin: 50px 0;
+      position: relative;
+      font-family: montserrat, sans-serif;
+    }
+
+    .form-v10-content .form-detail {
+      position: relative;
+      width: 100%;
+      display: flex;
+      display: -webkit-flex;
+    }
+
+    .form-v10-content .form-detail h2 {
+      font-weight: 500;
+      font-size: 25px;
+      margin-bottom: 30px;
+      padding: 33px 50px 0 60px;
+    }
+
+    .form-v10-content .form-detail .form-left {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 100%;
+    }
+
+    .form-v10-content .form-detail .form-left h2 {
+      color: #2271dd;
+    }
+
+    .form-v10-content .form-detail .form-group {
+      display: flex;
+      display: -webkit-flex;
+    }
+
+    .form-v10-content .form-detail .form-row {
+      position: relative;
+      margin-bottom: 24px;
+      padding-left: 60px;
+      padding-right: 50px;
+    }
+
+    .form-v10-content .form-detail .form-left .form-group .form-row.form-row-1 {
+      width: 50%;
+      padding: 0 12px 0 60px;
+    }
+
+    .form-v10-content .form-detail .form-left .form-group .form-row.form-row-2 {
+      width: 50%;
+      padding: 0 50px 0 12px;
+    }
+
+    .form-v10-content .form-detail select,
+    .form-v10-content .form-detail input {
+      width: 90%;
+      padding: 11.5px 15px 5px;
+      border: 1px solid transparent;
+      background: 0 0;
+      /*appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    -o-appearance: unset;
+    -ms-appearance: unset;*/
+      outline: none;
+      -moz-outline: none;
+      -webkit-outline: none;
+      -o-outline: none;
+      -ms-outline: none;
+      font-family: montserrat, sans-serif;
+      font-size: 20px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+    }
+
+    .form-v10-content .form-detail select {
+      background: 0 0;
+      position: relative;
+      z-index: 9;
+      cursor: pointer;
+    }
+
+    .form-v10-content .form-detail .form-left select {
+      color: #666;
+    }
+
+    .form-v10-content .form-detail .select-btn {
+      z-index: 0;
+      position: absolute;
+      top: 30%;
+      right: 11.5%;
+      font-size: 18px;
+    }
+
+    .form-v10-content .form-detail .form-left .select-btn {
+      color: #666;
+    }
+
+    .form-v10-content .form-detail .form-left input {
+      color: #000;
+    }
+
+    .form-v10-content .form-detail .form-left input,
+    .form-v10-content .form-detail .form-left select {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .form-v10-content .form-detail .form-left input:focus,
+    .form-v10-content .form-detail .form-left select:focus {
+      border-bottom: 1px solid #999;
+    }
+
+    .form-v10-content .form-detail .form-checkbox {
+      margin-top: 25px;
+      padding: 0 50px 0 0;
+      position: relative;
+    }
+
+    .form-v10-content .form-detail .form-checkbox input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .form-v10-content .form-detail .form-checkbox .checkmark {
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      height: 15px;
+      width: 15px;
+      border: 1px solid #000000;
+      cursor: pointer;
+    }
+
+    .form-v10-content .form-detail .form-checkbox .checkmark::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 3px;
+      height: 8px;
+      border: 1px solid #000000;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+      display: none;
+    }
+
+    .form-v10-content
+      .form-detail
+      .form-checkbox
+      input:checked
+      ~ .checkmark::after {
+      display: block;
+    }
+
+    .form-v10-content .form-detail .form-checkbox p {
+      margin-left: 25px;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .form-v10-content .form-detail .form-checkbox .text {
+      font-weight: 400;
+      color: #000000;
+      text-decoration: underline;
+    }
+
+    .form-v10-content .form-detail .form-left .Submit {
+      background: #ffffff;
+      border-radius: 25px;
+      -o-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      box-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.15);
+      -o-box-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.15);
+      -ms-box-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.15);
+      width: 180px;
+      border: none;
+      margin: 0 auto;
+      display: inline-block;
+      cursor: pointer;
+      color: #333;
+      font-weight: 700;
+      font-size: 25px;
+    }
+
+    .form-v10-content .form-detail .form-left .Submit:hover {
+      background: #2271dd;
+    }
+
+    .form-v10-content .form-detail .form-left input::-webkit-input-placeholder {
+      color: #666;
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      .form-v10-content {
+        margin: 95px 20px;
+      }
+    }
+
+    @media screen and (max-width: 991px) and (min-width: 768px) {
+      .form-v10-content .form-detail .form-group {
+        flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+      }
+
+      .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-row.form-row-1,
+      .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-row.form-row-2,
+      .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-v10-content
+        .form-detail
+        .form-group
+        .form-row.form-row-1,
+      .form-v10-content .form-detail .form-group .form-row.form-row-2 {
+        width: auto;
+        padding: 0 50px 0 60px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .form-v10-content .form-detail {
+        flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+      }
+      .form-v10-content .form-detail .form-left {
+        padding-bottom: 50px;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      .form-v10-content .form-detail .form-group {
+        flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+      }
+
+      .form-v10-content .form-detail .form-row,
+      .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-row.form-row-1,
+      .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-row.form-row-2,
+      .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-v10-content
+        .form-detail
+        .form-left
+        .form-group
+        .form-v10-content
+        .form-detail
+        .form-group
+        .form-row.form-row-1,
+      .form-v10-content .form-detail .form-group .form-row.form-row-2 {
+        width: auto;
+        padding: 0 30px;
+      }
+
+      .form-v10-content .form-detail .select-btn,
+      .form-v10-content .form-detail .form-left .form-group .select-btn,
+      .form-v10-content
+        .form-detail
+        .form-group
+        .form-row.form-row-2
+        .select-btn {
+        right: 15%;
+      }
+
+      .form-v10-content .form-detail h2 {
+        padding: 33px 30px 0;
+      }
+
+      .form-v10-content .form-detail .form-checkbox {
+        padding: 0 30px;
+      }
+
+      .form-v10-content .form-detail .form-checkbox .checkmark {
+        left: 30px;
+      }
+    }
+
+    .checkbox {
+      /* password checkbox */
+      position: absolute;
+      right: -100px;
+      top: 20px;
+    }
+  </style>
+
+    <div class="page-content">
+      <div class="form-v10-content">
+        <form class="form-detail" id="form">
+          <div class="form-left">
+            <h1 style="margin-top: 0.5em; min-height: 1em; text-align: center">
+              Sign up to become a member
+            </h1>
+            <hr />
+
+            <p id="error" style="text-align: center; color: red"></p>
+            <p id="succes" style="text-align: center"></p>
+
+            <h2>Account details</h2>
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="Username"
+                  id="Username"
+                  class="input-text"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="form-row form-row-2">
+                <input
+                  type="password"
+                  name="Password"
+                  id="password"
+                  class="input-text"
+                  placeholder="Password"
+                  required
+                />
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  class="checkbox"
+                />
+              </div>
+            </div>
+
+            <h2>General Infomation</h2>
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  class="input-text"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="form-row form-row-2">
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  class="input-text"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="your_email"
+                  id="your_email"
+                  class="input-text"
+                  required
+                  pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-row form-row-2">
+                <input
+                  type="text"
+                  name="phone"
+                  class="phone"
+                  id="phone"
+                  placeholder="Phone"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="street"
+                  class="street"
+                  id="street"
+                  placeholder="Street + Nr"
+                  required
+                />
+              </div>
+              <div class="form-row form-row-2">
+                <input
+                  type="text"
+                  name="city"
+                  class="city"
+                  id="city"
+                  placeholder="City"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="zip"
+                  class="zip"
+                  id="zip"
+                  placeholder="Zip Code"
+                  required
+                />
+              </div>
+
+              <div class="form-row form-row-2">
+                <div class="form-checkbox">
+                  <label class="container"
+                    ><p>
+                      I do accept the
+                      <a href="/termsandconditions" data-navigo class="text"
+                        >Terms and Conditions</a
+                      >
+                    </p>
+                    <input type="checkbox" name="checkbox" required />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="form-row-last"
+              style="text-align: center; padding: 40px"
+            >
+              <button
+                type="submit"
+                name="Submit"
+                class="Submit"
+                style="margin: 0 auto"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

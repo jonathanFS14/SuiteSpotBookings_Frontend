@@ -1,0 +1,77 @@
+<div class="template">
+    <form id="addRoomForm" style="max-width: 800px;">
+        <h2>Add Room</h2>
+    
+        <div class="row">
+            <div class="col-md-2">
+                <label for="roomNumber">Room Number:</label>
+            </div>
+            <div class="col-md-10">
+                <input type="number" id="roomNumber" name="roomNumber" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="floor">Floor:</label>
+            </div>
+            <div class="col-md-10">
+                <input type="text" id="floor" name="floor" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="numberOfBeds">Number of Beds:</label>
+            </div>
+            <div class="col-md-10">
+                <input type="text" id="numberOfBeds" name="numberOfBeds" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="roomType">Room Type:</label>
+            </div>
+            <div class="col-md-10">
+                <input type="text" id="roomType" name="roomType" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="roomPrice">Room Price:</label>
+            </div>
+            <div class="col-md-10">
+                <input type="text" id="roomPrice" name="roomPrice" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="roomDescription">Room Description:</label>
+            </div>
+            <div class="col-md-10">
+                <textarea id="roomDescription" name="roomDescription" class="form-control" required></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for="hotelId">Hotel ID:</label>
+            </div>
+            <div class="col-md-10">
+                <input type="number" id="hotelId" name="hotelId" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 1em;">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-dark">Add Room</button>
+            </div>
+        </div>
+
+        <p id="error" style="color:red"></p>
+        <div id="RoomResponse"></div>
+    </form>
+</div>
